@@ -1,0 +1,32 @@
+<sly
+	data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+<sly data-sly-call="${clientlib.css @categories='lowdowncat'}" /></sly>
+
+<div class="ldcontainer">
+	<h1>${properties.jcr:title}</h1>
+
+	<img class="ldimage" src="${properties.fileReference}">
+
+	<div class="ldtext">
+
+		<div class="ldsubtitle">
+			<h2>${properties.jcr:subtitle}</h2>
+			<p>${properties.jcr:description}</p>
+
+		</div>
+
+		<div class="ldsubtitle2">
+			<h2>${properties.jcr:subtitle2}</h2>
+			<p>${properties.jcr:description2}</p>
+
+		</div>
+	</div>
+	<div class="ldbuttondiv">
+
+		<a href="${properties.linkURL}" target="blank">
+			<button class="ldbutton">Learn more about coffee</button>
+		</a>
+	</div>
+
+
+</div>
