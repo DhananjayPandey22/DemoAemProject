@@ -1,0 +1,36 @@
+<sly
+	data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+<sly data-sly-call="${clientlib.css @categories='espressocat'}" /></sly>
+
+<div class="escontainer">
+	<h1>${properties.jcr:title}</h1>
+	<div class="filterCoffee">
+
+		<img class="esimagel" src="${properties.fileReference}">
+
+		<div class="essubtitle">
+			<h2>${properties.jcr:subtitle}</h2>
+			<p>${properties.jcr:description}</p>
+
+		</div>
+	</div>
+
+	<div class="estext">
+		<h1>OR</h1>
+	</div>
+
+	<div class="espresso">
+
+		<img class="esimage" src="${properties.fileReference2}">
+		<div class="essubtitle2">
+			<h2>${properties.jcr:subtitle2}</h2>
+			<p>${properties.jcr:description2}</p>
+
+		</div>
+
+	</div>
+	<a href="${properties.linkURL}" target="blank">
+		<button class="esbutton">Take your Quiz</button>
+	</a>
+
+</div>
