@@ -1,0 +1,13 @@
+<sly
+	data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+<sly data-sly-call="${clientlib.css @categories='cardccat'}" /></sly>
+
+<div data-sly-list.can="${resource.getChildren}">
+    <ul class="flexing" data-sly-list.mf="${can.getChildren}">
+        <div class="cccont">
+        <img src="${mf.linkURL}">
+       <h2>${mf.title @ context='html'}</h2>
+       <p class="carddesc">${mf.subtitle @ context='html'}</p>
+       </div>
+    </ul>
+    </div>

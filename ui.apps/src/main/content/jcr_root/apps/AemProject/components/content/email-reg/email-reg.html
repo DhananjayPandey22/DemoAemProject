@@ -1,28 +1,6 @@
-<style>
-.emailform {
-	float: right;
-	width: 30%;
-	margin-top: 28px;
-}
-
-.textemail {
-	width: 100%;
-}
-
-.emailtitle {
-	width: 60%;
-	float: left;
-}
-.emailsub{
-display:inline-block;
-}
-
-.emailcontainer {
-	font-size: 100%;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	line-height: 1.5;
-}
-</style>
+<sly
+	data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+<sly data-sly-call="${clientlib.css @categories='emailrcat'}" /></sly>
 
 <div class="emailcontainer">
 
@@ -35,10 +13,6 @@ display:inline-block;
 		</form>
 	</div>
 
-	<div id="rgstr" name="rgstr"></div>
-	<div id="email" name="email"></div>
-	
-	
 <div class="emailsub">
 	<p>
 		${properties.jcr:subtitle} <a style="color: black !important;"
@@ -50,73 +24,5 @@ display:inline-block;
 	</div>
 </div>
 
-
-
-<script>
-	// this is the id of the form
-
-	function loginuser() {
-		var loginPopup = document.getElementById("loginPopup");
-
-		if (loginPopup.style.display == "block") {
-
-			loginPopup.style.display = "none";
-
-		} else {
-
-			loginPopup.style.display = "block"
-
-		}
-
-	}
-
-	$("#register")
-			.submit(
-					function(e) {
-
-						e.preventDefault(); // avoid to execute the actual submit of the form.
-
-						var form = $(this);
-
-						var url = "/bin/demologinPagesss";
-
-						$
-								.ajax({
-
-									type : "POST",
-
-									url : url,
-
-									data : form.serialize(), // serializes the form's elements.
-
-									success : function(data, textStatus, jqXHR) {
-
-										if (data.status == "202") {
-
-											alert("Login Successfull")
-
-											window
-													.open("http://localhost:4502/content/demoLoginPage/en/home.html")
-										} else {
-											alert("Incorrect Credentials: Please try again")
-											//             location.href="http://localhost:4502/content/demoLoginPage/en/home.html"
-
-										}
-
-									},
-									error : function(XMLHttpRequest,
-											textStatus, errorThrown) {
-										//write your logic that you need to perform on error
-
-									}
-
-								});
-
-					});
-</script>
-
-
-
-</html>
 
 

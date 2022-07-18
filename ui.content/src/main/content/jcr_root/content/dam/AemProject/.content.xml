@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OrderedFolder">
     <jcr:content
+        dam:noThumbnail="{Boolean}true"
         jcr:primaryType="nt:unstructured"
         jcr:title="AemProject">
         <folderThumbnail/>
     </jcr:content>
-    <asset.jpg/>
+    <Beanz_Icon_Find_Your_Match.webp/>
+    <Beanz_Icon_Homegrown_Roasters.webp/>
+    <Beanz_Icon_Keep_It_Fresh_x0020__x0028_1_x0029_.webp/>
+    <Beanz_Icon_Subscribe_and_Save.webp/>
+    <Beanz_Website_3000x1536_Homepage_Header_B_new.webp/>
+    <beanz-by-breville-logo-white.svg/>
+    <beanz-white_x0020__x0028_1_x0029_.svg/>
+    <beanz-white.svg/>
+    <coffee-101.webp/>
+    <espresso-coffee.png/>
+    <filter-coffee.png/>
 </jcr:root>
