@@ -1,0 +1,16 @@
+<sly
+	data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+<sly data-sly-call="${clientlib.css @categories='topnavgcat'}" /></sly>
+
+<div class="top-navg">
+
+	<div class="logodiv">	<a href="http://localhost:4502/content/demoLoginPage/en/contact.html">
+		<img class="navglogo" src="${properties.fileReference}"></a></div>
+
+		<div class="listdiv"><ul  data-sly-use.topnav="top-navg.js"
+			data-sly-list="${topnav.root.listChildren}">
+			<li class="navglist"><a style="color: white;text-decoration:none;line-height:1.5rem;"
+				href="${item.path}.html">${item.title}</a></li>
+		</ul></div>
+
+</div>

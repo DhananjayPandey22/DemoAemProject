@@ -63,6 +63,11 @@
                             </column>
                         </items>
                     </image>
+                    <button_x0020_title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldLabel="Button-Title"
+                        name="./jcr:buttontitle"/>
                 </items>
             </column>
         </items>
