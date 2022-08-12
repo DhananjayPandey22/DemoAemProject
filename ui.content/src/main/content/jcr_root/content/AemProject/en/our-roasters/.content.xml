@@ -4,22 +4,20 @@
     <jcr:content
         cq:contextHubPath="/etc/cloudsettings/default/contexthub"
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
-        cq:lastModified="{Date}2022-08-12T14:05:12.800+05:30"
+        cq:lastModified="{Date}2022-08-12T14:41:47.349+05:30"
         cq:lastModifiedBy="admin"
-        cq:lastReplicated="{Date}2022-08-12T14:05:19.234+05:30"
+        cq:lastReplicated="{Date}2022-08-12T14:49:18.413+05:30"
         cq:lastReplicatedBy="admin"
         cq:lastReplicationAction="Activate"
-        cq:tags="[training:page/homepage,training:page/customercare]"
         cq:template="/conf/AEM-training/settings/wcm/templates/testtemp1"
-        jcr:description="this is shop coffee page"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Shop Coffee"
-        jcr:uuid="858b6154-0aac-4e9b-a1e6-d91449be15dd"
+        jcr:title="Our Roasters"
+        jcr:uuid="63bcfe11-06c0-4458-a462-bcc5d4caf861"
+        sling:redirect="true"
         sling:resourceType="wcm/foundation/components/page"
-        sling:vanityPath="/shopCoffee"
-        id="shopcoffeeid">
+        sling:vanityPath="/roasters">
         <root
             jcr:lastModified="{Date}2022-06-27T13:30:55.414+05:30"
             jcr:lastModifiedBy="admin"
@@ -31,20 +29,14 @@
                 jcr:lastModified="{Date}2022-06-27T13:36:33.550+05:30"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <linkimage
-                    jcr:buttontitle="Start Exploring"
-                    jcr:created="{Date}2022-08-10T16:14:31.952+05:30"
-                    jcr:createdBy="admin"
-                    jcr:description="Discover third wave specialty coffees, hand-picked from coast to coast."
-                    jcr:lastModified="{Date}2022-08-12T14:05:12.797+05:30"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    jcr:title="Find your roast"
-                    sling:resourceType="AemProject/components/content/linkimage"
-                    imageURL="/content/dam/AemProject/Beanz_Website_2880x878_ProductListing_2_Header.webp"
-                    linkURL="https://breville.scene7.com/is/image/brevilleprod/Beanz_Website_2880x878_ProductListing_2_Header?ts=1654619050383&amp;dpr=off"/>
-            </responsivegrid_59029313>
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+            <responsivegrid
+                jcr:created="{Date}2022-06-27T13:32:27.894+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-06-27T13:32:27.894+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
         </root>
     </jcr:content>
 </jcr:root>
