@@ -4,12 +4,12 @@
 
 <div class="top-navg">
 
-	<div class="logodiv">	<a href="http://localhost:4502/content/demoLoginPage/en/contact.html">
+	<div class="logodiv">	<a href="/home">
 		<img class="navglogo" src="${properties.fileReference}"></a></div>
 
 		<div class="listdiv"><ul  data-sly-use.topnav="top-navg.js"
 			data-sly-list="${topnav.root.listChildren}">
-			<li class="navglist"><a style="color: white;text-decoration:none;line-height:1.5rem;"
+<li class="navglist" data-sly-test="${item.title != 'Home Page'}"> <a style="color: white;text-decoration:none;line-height:1.5rem;"
 				href="${item.path}.html">${item.title}</a></li>
 		</ul></div>
 

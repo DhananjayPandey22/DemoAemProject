@@ -1,13 +1,55 @@
-<sly
-	data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
-<sly data-sly-call="${clientlib.css @categories='cardccat'}" /></sly>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+  <sly data-sly-call="${clientlib.css @categories='sliderCard'}"
+/></sly>
 
-<div data-sly-list.can="${resource.getChildren}">
-    <ul class="flexing" data-sly-list.mf="${can.getChildren}">
-        <div class="cccont">
-        <img src="${mf.linkURL}">
-       <h2>${mf.title @ context='html'}</h2>
-       <p class="carddesc">${mf.subtitle @ context='html'}</p>
-       </div>
-    </ul>
-    </div>
+<div class="slideshow-container" data-sly-list.can="${resource.getChildren}">
+  <ul class="mySlides fade" data-sly-list.mf="${can.getChildren}">
+    <img src="${mf.linkURL}" />
+    <p>${mf.title @ context='html'}</p>
+    <p>${mf.subtitle @ context='html'}</p>
+  </ul>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- The dots/circles -->
+<div style="text-align: center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+</script>

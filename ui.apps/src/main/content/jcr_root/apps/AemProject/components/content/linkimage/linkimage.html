@@ -2,11 +2,11 @@
 <sly data-sly-call="${clientlib.css @categories='linkimagecat'}"/></sly>
 
 <div class="container">
-	<img class="linkimg" src="${properties.fileReference}">
+	<img class="linkimg" src="${properties.imageURL}">
 	<div class="textlink2">
 		<h1>${properties.jcr:title}</h1>
 		<p class="linkpara">${properties.jcr:description}</p>
-		<a href="${properties.linkURL}" target="blank">
+		<a href="${properties.linkURL}.html" target="blank">
 			<button class="linkbutton">${properties.jcr:buttontitle}</button>
 		</a>
 	</div>

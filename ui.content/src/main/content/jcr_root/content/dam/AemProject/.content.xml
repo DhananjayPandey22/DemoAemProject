@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="sling:OrderedFolder">
+    <asset.jpg/>
     <jcr:content
         dam:noThumbnail="{Boolean}true"
         jcr:primaryType="nt:unstructured"
@@ -18,4 +19,5 @@
     <coffee-101.webp/>
     <espresso-coffee.png/>
     <filter-coffee.png/>
+    <Beanz_Website_2880x878_ProductListing_2_Header.webp/>
 </jcr:root>
